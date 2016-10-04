@@ -9,7 +9,19 @@ output:
 
 Updated `r as.character(Sys.Date())`
 
-#### Causation
+### Assumption tests
+* [car] () avPlot (influential data), crPlot (linearity), linearHypothesis, ncvTest (heteroscedasticity test for lm), influencePlot (to detect outliers, better than Cooks distance in plot), outlierTest, leveragePlots, qqPlot (normality), vif
+* [fit.models] ()
+* [lmtest] ()
+* [nullabor] () graphical inferences (e.g. qq plots)
+* [mvinfluence] ()
+* [LogisticDx] ()
+* [gof] () Cumres for lm and glm
+* [hydroGOF] ()
+* [intRegGOF] () lm, glm, nls
+* [qvlma] () lm
+
+### Causation
 * [bnlearn] ()
 * [causaleffect] ()
 * [causalFX] ()
@@ -24,21 +36,9 @@ Updated `r as.character(Sys.Date())`
 * [treatSens] () lm with binary or continuous treatments
 * [wfe] () longitudinal data
 
-#### Assumption tests
-* [car] () avPlot (influential data), crPlot (linearity), linearHypothesis, ncvTest (heteroscedasticity test for lm), influencePlot (to detect outliers, better than Cooks distance in plot), outlierTest, leveragePlots, qqPlot (normality), vif
-* [fit.models] ()
-* [lmtest] ()
-* [nullabor] () graphical inferences (e.g. qq plots)
-* [mvinfluence] ()
-* [LogisticDx] ()
-* [gof] () Cumres for lm and glm
-* [hydroGOF] ()
-* [intRegGOF] () lm, glm, nls
-* [qvlma] () lm
-
-#### Collinearity (VIF>10, only for explanation): reduced by centering
-* [ridge]
-* [bestglm]
+### Collinearity (VIF>10, only for explanation): reduced by centering
+* [ridge]()
+* [bestglm]()
 * [yhat] () dominance analysis
 * [rf] ()
 * [pcareg] ()
@@ -46,7 +46,7 @@ Updated `r as.character(Sys.Date())`
 * [perturb] ()
 * [pls] () pcr
 
-#### Importance
+### Importance
 * [Boruta] () rf
 * [multiPIM] () Variable Importance Analysis with Population Intervention Models using TMLE
 * [relaimpo]() Relative importance of predictors
@@ -56,7 +56,6 @@ Updated `r as.character(Sys.Date())`
 * [yhat] () Interpreting Regression Effects
 * [vita] () Variable Importance Testing Approaches
 
-
 ### Feature selection (only for prediction)
 * [AICcmodavg] () Model selection and multimodel inference
 * [bestglm] ()
@@ -64,7 +63,7 @@ Updated `r as.character(Sys.Date())`
 * [SIS] () Sure Independence Screening for HD1 models, for glm & survival
 * [subselect] ()
 
-#### Ensemble or model averaging:
+### Ensemble or model averaging:
 * [caretEnsemble] ()
 * [MuMIn]() Model selection and averaging
 * [medley] () blending predictive models
