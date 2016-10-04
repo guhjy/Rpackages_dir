@@ -10,80 +10,80 @@ output:
 Updated `r as.character(Sys.Date())`
 
 #### Causation
-* [bnlearn]
-* [causaleffect]
-* [causalFX]
-* [causalsens]
-* [causalTree] heterogeneous subgroup treatment effects by CART
-* [causalGAM]
-* [CovSel]
-* [CompareCausalNetworks] backShift, CAM, InvariantCausalPrediction, pcalg
-* [ParallelPC]
-* [PCovR]
-* [SID]
-* [treatSens] lm with binary or continuous treatments
-* [wfe] longitudinal data
+* [bnlearn] ()
+* [causaleffect] ()
+* [causalFX] ()
+* [causalsens] ()
+* [causalTree] () heterogeneous subgroup treatment effects by CART
+* [causalGAM] ()
+* [CovSel] ()
+* [CompareCausalNetworks] () backShift, CAM, InvariantCausalPrediction, pcalg
+* [ParallelPC] ()
+* [PCovR] Principle covariates regression ()
+* [SID] ()
+* [treatSens] () lm with binary or continuous treatments
+* [wfe] () longitudinal data
 
 #### Assumption tests
-* [car] avPlot (influential data), crPlot (linearity), linearHypothesis, ncvTest (heteroscedasticity test for lm), influencePlot (to detect outliers, better than Cooks distance in plot), outlierTest, leveragePlots, qqPlot (normality), vif
-* [fit.models]
-* [lmtest]
-* [nullabor] graphical inferences (e.g. qq plots)
-* [mvinfluence]
-* [LogisticDx]
-* [gof] Cumres for lm and glm
-* [hydroGOF]
-* [intRegGOF] lm, glm, nls
-* [qvlma] lm
+* [car] () avPlot (influential data), crPlot (linearity), linearHypothesis, ncvTest (heteroscedasticity test for lm), influencePlot (to detect outliers, better than Cooks distance in plot), outlierTest, leveragePlots, qqPlot (normality), vif
+* [fit.models] ()
+* [lmtest] ()
+* [nullabor] () graphical inferences (e.g. qq plots)
+* [mvinfluence] ()
+* [LogisticDx] ()
+* [gof] () Cumres for lm and glm
+* [hydroGOF] ()
+* [intRegGOF] () lm, glm, nls
+* [qvlma] () lm
 
 #### Collinearity (VIF>10, only for explanation): reduced by centering
 * [ridge]
 * [bestglm]
-* [yhat] dominance analysis
-* [rf]
-* [pcareg]
-* [penalized]
-* [perturb]
-* [pls] pcr
+* [yhat] () dominance analysis
+* [rf] ()
+* [pcareg] ()
+* [penalized] ()
+* [perturb] ()
+* [pls] () pcr
 
 #### Importance
-* [Boruta] rf
-* [multiPIM] Variable Importance Analysis with Population Intervention Models using TMLE
+* [Boruta] () rf
+* [multiPIM] () Variable Importance Analysis with Population Intervention Models using TMLE
 * [relaimpo]() Relative importance of predictors
-* [AICcmodavg]
-* [MuMIn]
-* [rms] plot(anova(f), what='proportion chisq')
-* [yhat] Interpreting Regression Effects
-* [vita] Variable Importance Testing Approaches
+* [AICcmodavg] ()
+* [MuMIn] ()
+* [rms] () plot(anova(f), what='proportion chisq')
+* [yhat] () Interpreting Regression Effects
+* [vita] () Variable Importance Testing Approaches
 
 
 ### Feature selection (only for prediction)
 * [AICcmodavg] () Model selection and multimodel inference
 * [bestglm] ()
 * [glmulti]() Model selection and multimodel inference, for glm & survival
-* [SIS} Sure Independence Screening for HD1 models, for glm & survival
-* [subselect]
+* [SIS] () Sure Independence Screening for HD1 models, for glm & survival
+* [subselect] ()
 
 #### Ensemble or model averaging:
-* [caretEnsemble]
+* [caretEnsemble] ()
 * [MuMIn]() Model selection and averaging
-* [medley] blending predictive models
-* [subsemble] 
-* [superlearner]
+* [medley] () blending predictive models
+* [subsemble] ()
+* [superlearner] ()
 
 #### for binary Y:
 * [VariableSelection] () Identify the appropriate set of predictors of a binary outcome
 
 #### for lm:
-* [BayesVarSel]
-* [CovSel] Model-Free Covariate or confounder Selection for explanation or causation
-* [leaps] regression subset selection
+* [BayesVarSel] ()
+* [CovSel] () Model-Free Covariate or confounder Selection for explanation or causation
+* [leaps] () regression subset selection
 
 #### for survival:
-[ipred] indirect classification and bagging for classification, regression and survival
+[ipred] () indirect classification and bagging for classification, regression and survival
 [ranger] rf for HD1 data
-[rsig] Robust Signature Selection for Survival Outcomes
-[SurvRank]
+[rsig] () Robust Signature Selection for Survival Outcomes
+[SurvRank] ()
 
 ### Penalization of regularization
 * {Boruta] () An all relevant feature selection wrapper algorithm. It finds relevant features by comparing original attributes' importance with importance achievable at random, estimated using their permuted copies.
