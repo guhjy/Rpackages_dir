@@ -1,3 +1,93 @@
+#### Causation
+* [bnlearn]
+* [causaleffect]
+* [causalFX]
+* [causalsens]
+* [causalTree] heterogeneous subgroup treatment effects by CART
+* [causalGAM]
+* [CovSel]
+* [CompareCausalNetworks] backShift, CAM, InvariantCausalPrediction, pcalg
+* [ParallelPC]
+* [PCovR]
+* [SID]
+* [treatSens] lm with binary or continuous treatments
+* [wfe] longitudinal data
+
+#### Assumption tests
+* [car] avPlot (influential data), crPlot (linearity), linearHypothesis, ncvTest (heteroscedasticity test for lm), influencePlot (to detect outliers, better than Cooks distance in plot), outlierTest, leveragePlots, qqPlot (normality), vif
+* [fit.models]
+* [lmtest]
+* [nullabor] graphical inferences (e.g. qq plots)
+* [mvinfluence]
+* [LogisticDx]
+* [gof] Cumres for lm and glm
+* [hydroGOF]
+* [intRegGOF] lm, glm, nls
+* [qvlma] lm
+
+#### Collinearity (VIF>10, only for explanation): reduced by centering
+* [ridge]
+* [bestglm]
+* [yhat] dominance analysis
+* [rf]
+* [pcareg]
+* [penalized]
+* [perturb]
+* [pls] pcr
+
+#### Importance
+* [Boruta] rf
+* [multiPIM] Variable Importance Analysis with Population Intervention Models using TMLE
+* [relaimpo]() Relative importance of predictors
+* [AICcmodavg]
+* [MuMIn]
+* [rms] plot(anova(f), what='proportion chisq')
+* [yhat] Interpreting Regression Effects
+* [vita] Variable Importance Testing Approaches
+
+
+### Feature selection (only for prediction)
+* [AICcmodavg] () Model selection and multimodel inference
+* [bestglm] ()
+* [glmulti]() Model selection and multimodel inference, for glm & survival
+* [SIS} Sure Independence Screening for HD1 models, for glm & survival
+* [subselect]
+
+#### Ensemble or model averaging:
+* [caretEnsemble]
+* [MuMIn]() Model selection and averaging
+* [medley] blending predictive models
+* [subsemble] 
+* [superlearner]
+
+#### for binary Y:
+* [VariableSelection] () Identify the appropriate set of predictors of a binary outcome
+
+#### for lm:
+* [BayesVarSel]
+* [CovSel] Model-Free Covariate or confounder Selection for explanation or causation
+* [leaps] regression subset selection
+
+#### for survival:
+[ipred] indirect classification and bagging for classification, regression and survival
+[ranger] rf for HD1 data
+[rsig] Robust Signature Selection for Survival Outcomes
+[SurvRank]
+
+### Penalization of regularization
+* {Boruta] () An all relevant feature selection wrapper algorithm. It finds relevant features by comparing original attributes' importance with importance achievable at random, estimated using their permuted copies.
+* [c060] () Inference for Lasso and Elastic-Net Regularized Cox and Generalized Linear Models
+* [FeaLect] () Scores Features for Feature Selection
+* [fscaret] () Automated Feature Selection from 'caret'
+* [Fselector] () Attribute subset selection is the process of identifying and removing as much of the irrelevant and redundant information as possible. rf
+* [FWDselect] select the best model or best subset of variables using different types of data (binary, Gaussian or Poisson) and applying it in different contexts (parametric or non-parametric).
+* [glmnet] () Lasso and Elastic-Net Regularized glm, for glm and survival
+* [glmulti] () for interactions
+* [meifly] () Exploratory model analysis. Fit and graphical explore ensembles of linear models
+* [penalized] Penalized Estimation in GLMs and in the Cox Model. Fitting possibly high dimensional
+* [relaxnet] () Relaxation of glmnet models for lm
+* [shrink] () Global, Parameterwise and Joint Shrinkage Factor Estimation
+
 ---
 output: 
   md_document:
@@ -11,8 +101,6 @@ output:
 
 Updated `r as.character(Sys.Date())`
 
-CovSel (Model-Free Covariate or confounder Selection for explanation or causation)
-
 These are packages that I often use or, alternatively, I need only rarely but don't want to forget about. Of course, there are many other useful packages out there (e.g. at [CRAN](http://cran.r-project.org/web/packages/available_packages_by_name.html) or [GitHub](https://github.com/search?q=package&type=Repositories&ref=advsearch&l=R). Check also [CRAN task views](http://cran.r-project.org/web/views/).
 
 
@@ -20,11 +108,9 @@ These are packages that I often use or, alternatively, I need only rarely but do
 
 Check [CRAN Task View on Web technologies](http://cran.r-project.org/web/views/WebTechnologies.html).
 
-
 ## Data management
 
 Check out this great cheatsheet: [Data wrangling with dplyr and tidyr](http://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
-
 
 * [rio]() A Swiss-Army Knife for Data I/O
 * [tidyr]() Reshape data
@@ -37,6 +123,7 @@ Check out this great cheatsheet: [Data wrangling with dplyr and tidyr](http://ww
 * [lubridate]() Dates and times
 * [multitable]() Manipulate multiple arrays
 * [datacheck]() Tools for checking data consistency
+* [pastecs] stat.desc
 * [tabplot]() Large datasets viz.
 * [tabplotd3]() Interactive
 * [tableplot]()
@@ -44,45 +131,11 @@ Check out this great cheatsheet: [Data wrangling with dplyr and tidyr](http://ww
 * [DescTools](http://cran.r-project.org/web/packages/DescTools/index.html) Many useful functions
 * [summarytools]() Quickly summarize dataframes (inc. markdown output)
 
-
 ## General statistics
-
-### Feature selection
-* [AICcmodavg] () Model selection and multimodel inference
-* [bestglm] ()
-* [glmulti]() Model selection and multimodel inference
-* [MuMIn]() Model selection and averaging
-
-
-#### Only for binary Y:
-* [VariableSelection] () Identify the appropriate set of predictors of a binary outcome
-
-
-#### Only for lm:
-* [BayesVarSel] () 
-
-
-### Penalization of regularization
-* {Boruta] () An all relevant feature selection wrapper algorithm. It finds relevant features by comparing original attributes' importance with importance achievable at random, estimated using their permuted copies.
-* [c060] () Inference for Lasso and Elastic-Net Regularized Cox and Generalized Linear Models
-* [FeaLect] () Scores Features for Feature Selection
-* [fscaret] () Automated Feature Selection from 'caret'
-* [Fselector] () Attribute subset selection is the process of identifying and removing as much of the irrelevant and redundant information as possible. rf
-* [FWDselect] select the best model or best subset of variables using different types of data (binary, Gaussian or Poisson) and applying it in different contexts (parametric or non-parametric).
-* [glmnet] () Lasso and Elastic-Net Regularized glm
-* [glmulti] () for interactions
-* [meifly] () Exploratory model analysis. Fit and graphical explore ensembles of linear models
-* [relaxnet] () Relaxation of glmnet models for lm
-* [shrink] () Global, Parameterwise and Joint Shrinkage Factor Estimation
-
-
-
 
 ### Ordination & Multivariate Analysis
 
-
 Check also [Environmetrics](http://cran.r-project.org/web/views/Environmetrics.html) and [Multivariate](http://cran.r-project.org/web/views/Multivariate.html) CRAN Task Views.
-
 
 * [vegan]()
 * [ade4](http://cran.r-project.org/web/packages/ade4/index.html) Multivariate data analysis and display
@@ -93,26 +146,20 @@ Check also [Environmetrics](http://cran.r-project.org/web/views/Environmetrics.h
 * [boral]() Bayesian ordination and regression analysis
 * [eigenprcomp](http://cran.r-project.org/web/packages/eigenprcomp/) Computes confidence intervals for the proportion explained by the first 1,2,k principal components
 
-
-
 ### Survival analysis
-
-
 * [survival]()
 * [survMisc]()
 * [coxme]() Mixed-effects cox regression
 * [rawr]() Plotting functions: kmplot & ggsurv
 
-
 ### Regression tools
-
 
 * [aod]() Analysis of Overdispersed data
 * [apricom] () a Priori Comparison of Regression Modelling Strategies
 * [arm]() Gelman's package: includes bayesglm, sim, coefplot...
 * [bbmle]() Tools for MLE
 * [binomTools]() Diagnostics for binomial regression
-* [car]() Regression tools
+* [car]() boxCox, anova (for nested models), dataEllipse 
 * [coefplot]() Plot model coefficients
 * [confReg]() Estimating confidence of individual regression predictions
 * [COUNT]() Regression models for count data (Poisson, Negative Binomial)
@@ -132,7 +179,7 @@ Check also [Environmetrics](http://cran.r-project.org/web/views/Environmetrics.h
 * [gnm]() Generalized nonlinear models
 * [heatmapFit]() Checking logistic regression goodness of fit
 * [hier.part]() Variance partitioning to assess 'importance' of predictors. See also `relaimpo`.
-* [relaimpo]() Relative importance of predictors
+* [Hmisc]() areg (Additive Regression with Optimal Transformations on Both Sides using Canonical Variates), aregImpute,redun (redundancy analysis), transcan
 * [nlme]() Mixed models
 * [lme4]() Mixed models
 * [pamm]() Power analysis for mixed models
@@ -140,6 +187,7 @@ Check also [Environmetrics](http://cran.r-project.org/web/views/Environmetrics.h
 * [likelihood]() Maximum Likelihood Estimation
 * [lmtest]() Diagnostic checks for linear regression
 * [MARSS]() Multivariate Autoregressive State-Space Modeling
+* [MASS] 
 * [MCMCglmm]() Mixed models fitted by MCMC
 * [mgcv]() GAM fitting
 * [miscF]() Multivariate Normal regression, spatial Bayesian mixed models, piecewise regression...
@@ -153,21 +201,17 @@ Check also [Environmetrics](http://cran.r-project.org/web/views/Environmetrics.h
 * [R2STATS]() GUI for fitting and comparing GLM and GLMM in R
 * [LMERConvenienceFunctions]()
 * [R2admb]() 
-* [rms]() Regression modeling strategies
+* [rms]() calibrate, fastbw, plsmo, Rq (quantreg), rrcov, validate
 * [Zelig]()
 
 
-
-
-
 ### Bayesian/MCMC
-
-
 Check also [Bayesian CRAN Task View](http://cran.r-project.org/web/views/Bayesian.html).
 
 * [bayess]() Funcions used in the book 'Bayesian essentials with R'
 * [blme]() Bayesian multilevel models
 * [BMA]() Model averaging
+* [BMS] 
 * [dclone]() Data cloning and MCMC tools (inc. JAGS functions)
 * [dcmle]() Hierarchical models through data cloning
 * [dlm]() Dynamic models and MCMC tools
@@ -178,10 +222,7 @@ Check also [Bayesian CRAN Task View](http://cran.r-project.org/web/views/Bayesia
 * [bayespref]() Analysis of count data
 * [predcomps](https://github.com/dchudz/predcomps) Average Predictive Comparisons
 
-
-
 #### MCMC diagnostics
-
 * [coda]() MCMC output analysis
 * [boa]() Analyses of MCMC output (like `coda`)
 * [ggmcmc]() Graphic analysis of MCMC output
@@ -192,9 +233,7 @@ Check also [Bayesian CRAN Task View](http://cran.r-project.org/web/views/Bayesia
 * [scapeMCMC]() MCMC diagnostic plots
 * [superdiag]() testing MCMC noncovergence
 
-
 #### Generic MCMC samplers
-
 * [adaptMCMC](http://cran.r-project.org/web/packages/adaptMCMC/index.html) Generic MCMC sampler
 * [BRugs]() Interface to OpenBUGS
 * [BayesX]() Structured Additive Regression
@@ -216,28 +255,17 @@ Check also [Bayesian CRAN Task View](http://cran.r-project.org/web/views/Bayesia
 * [glmmBUGS]()
 * [datalist](http://cran.r-project.org/web/packages/datalist/index.html)
 
-
 #### Spatial Bayes
-
 * [CARBayes]() Spatial models with CAR
 * [spBayes]() spatial Bayes
 * [geoCount](http://cran.r-project.org/web/packages/geoCount/index.html) generalized linear spatial models
 
-
 #### ABC
-
 * [abc](http://cran.r-project.org/web/packages/abc/index.html) Approximate Bayesian Computation
 * [easyABC]() Approximate Bayesian Computation
 
-
-
-
-
 ## Plotting & Visualisation
-
-
 Check also [CRAN Task View on Graphics](http://cran.r-project.org/web/views/Graphics.html).
-
 * [denstrip]() Plotting distributions (w uncertainty)
 * [visualize]() Graph Probability Distributions
 * [fanplot]() Visualise sequential probability distributions
@@ -267,14 +295,10 @@ Check also [CRAN Task View on Graphics](http://cran.r-project.org/web/views/Grap
 * [gplot2bdc](https://github.com/briandconnelly/ggplot2bdc)
 * [ggtern](http://www.ggtern.com/) Ternary diagrams
 * [ggthemr](https://github.com/cttobin/ggthemr) Extra themes for ggplot2
-
-
-
 * [plotly](https://github.com/ropensci/plotly) R interface to plotly
 * [googleVis]() Using google chart tools
 * [rCharts]() Interactive charts
 * [lattice]() Multivariate plots
-
 * [manipulate]() Interactive plots
 * [misc3d]() 3D plots
 * [mvtsplot]() Multivariate time series plot
@@ -300,23 +324,18 @@ Check also [CRAN Task View on Graphics](http://cran.r-project.org/web/views/Grap
 * [plotflow](https://github.com/trinker/plotflow) Useful plotting functions
 * [sendplot]() Interactive plots with tool-tip content
 * [zoom]() Allow to zoom/navigate in any plot.
-* [Hmisc]()
 * [epade]() Easy plots
 * [prettyGraphs]() Publication-quality graphics.
 * [scagnostics]() Scatterplot diagnostics
 
 
-
 ### Colour
-
 * [colorRamps]() Colour palettes
 * [RColorBrewer]()
 * [colorspace]() HCL (perceptually-based) palettes
 * [colortools]()
 * [plotKML]() Colour palettes for mapping
 * [gplots]() Rich.colors palettes
-
-
 
 * [dataview]()
 * [tabplot]() Large datasets viz.
@@ -326,15 +345,8 @@ Check also [CRAN Task View on Graphics](http://cran.r-project.org/web/views/Grap
 * [sjPlot]()
 * [squash]() Color-based plots for multivariate visualization
 
-
-
-
-
 ## Reproducible Research - Report generation
-
-
 Check also CRAN Task View on [Reproducible Research](http://cran.r-project.org/web/views/ReproducibleResearch.html).
-
 * [brew]()
 * [knitr]() Dynamic report generation
 * [knitrBootstrap](https://github.com/jimhester/knitrBootstrap) create bootstrap styled HTML reports from Rmarkdown
@@ -354,262 +366,15 @@ Check also CRAN Task View on [Reproducible Research](http://cran.r-project.org/w
 * [DescTools](http://cran.r-project.org/web/packages/DescTools/index.html)
 * [rctrack](http://www.stjuderesearch.org/site/depts/biostats/rctrack)
 
-
-
-
 ## Parallelisation & Big Data
-
-
 Check also [CRAN Task View on High Performance Computing](http://cran.r-project.org/web/views/HighPerformanceComputing.html).
-
 * [ff]() Big data management. See also package `ffbase`
 * [batch]() Batching routines in parallel
 * [bigdata]()
 
 
-
-## Niche & Species Distribution Modelling
-
-
-* [rgbif]() Access to GBIF data
-* [spocc]() Species occurrence data retrieval and mapping
-* [dismo]() Distribution modelling
-* [SDMTools](http://www.rdocumentation.org/packages/SDMTools)
-* [adehabitatHS](http://cran.r-project.org/web/packages/adehabitatHS/index.html) 
-* [biomod2]() SDM ensembles
-* [hSDM]() Bayesian SDM
-* [maxlike]() SDM for presence-only data
-* [MigClim]() Implements dispersal in SDMs
-* [GRaF]() SDM using latent Gaussian random fields
-* [SightabilityModel]()
-* [EnvNicheR]() 
-* [RinSp](http://cran.r-project.org/web/packages/RInSp/) Ecological niche metrics to measure individual specialization
-* [bdvis](https://github.com/vijaybarve/bdvis) Biodiversity data visualization
-* [phyloclim]() Includes functions for calculating niche overlap
-* [phylospacer]() Phyloclimates and phylomorphospaces
-* [PresenceAbsence]() 
-* [mboost]() Decomposing environmental, spatial, and spatiotemporal components of species distributions (Hothorn et al. 2011 Ecol Monogr)
-* [usdm](http://www.rdocumentation.org/packages/usdm) Uncertainty analysis for species distribution models, esp. focused on positional uncertainty
-* [ModelMap](http://cran.r-project.org/web/packages/ModelMap/) Random Forest and Stochastic Gradient Boosting Models
-* [modEVA](http://modtools.wordpress.com)
-* [rangemapper]() 
-* [comclim](http://cran.r-project.org/web/packages/comclim/index.html) Community climate statistics
-* [hypervolume](http://cran.r-project.org/web/packages/hypervolume/index.html) Modeling hypervolumes (species' niches)
-* [ppmlasso]() Point process models
-* [sdmvspecies]() Create virtual species for SDM
-* [virtualspecies](http://borisleroy.com/virtualspecies/) Create virtual species
-* [coenocline]() Simulate species presence and abundance along environmental gradients
-* [ecospat](http://cran.r-project.org/web/packages/ecospat/index.html) Many useful functions for niche & SDM (by A. Guisan's group)
-* [comclim]()
-* [Metadata]()
-* [ENiRG](http://cran.r-project.org/web/packages/ENiRG/index.html)
-
-
-
-### Occupancy modelling
-
-* [detect]() Occupancy modelling
-* [marked]()
-* [unmarked]()
-* [stocc]() Occupancy modeling
-* [hierarchicalDS]() hierarchical analysis of distance sampling data
-
-
-
-
-
-
-## Climate
-
-
-
-* [BerkeleyEarth](http://cran.r-project.org/web/packages/BerkeleyEarth/index.html) Climate data from Berkeley Earth database
-* [climates]() Tools for climate data (bioclim, downscaling, interpolation...)
-* [climatol]() Homogenisation of climate time series
-* [climstats]() Tools for climate data 
-* [RMAWGEN]() Generate daily time series from monthly mean values
-* [climdex.pcic]() Computation of climate indices
-* [ClimClass](http://cran.r-project.org/web/packages/ClimClass/index.html) Climate Classification according to various indices
-* [RClimMAWGEN]() generate time series of climate indices
-* [chillR]() Climate and phenology analysis
-* [rWBclimate]() Lots of historical data and future projections
-* [rnoaa]() 
-* [rghcnV3]() GHCN
-* [RNCEP]() weather data
-* [sirad]() Evapotranspiration etc
-* [SPEI]() Calculates Standardised Precipitation-Evaporation Index
-* [SPI]()
-* [weathermetrics]() 
-* [raincpc]() Rainfall data
-* [Evapotranspiration](http://cran.r-project.org/web/packages/Evapotranspiration/index.html)
-* [GhcnDaily](http://cran.r-project.org/web/packages/GhcnDaily/index.html)
-* [crn](http://cran.r-project.org/web/packages/crn/index.html) Get data from Climate Reference Network
-* [iki.dataclim](http://cran.r-project.org/web/packages/iki.dataclim/index.html)
-* [FedData](http://cran.r-project.org/web/packages/FedData/index.html)
-* [stationaRy](https://github.com/rich-iannone/stationaRy) Hourly data worldwide
-* [tempcyclesdata](https://cran.r-project.org/web/packages/tempcyclesdata/index.html) Temperature data for ca. 8000 stations 1975-2013
-
-
-## GIS/spatial functionality
-
-
-
-Check also CRAN Task View on [Spatial](http://cran.r-project.org/web/views/Spatial.html) and [Spatiotemporal](http://cran.r-project.org/web/views/SpatioTemporal.html) data.
-Check also CRAN Task View on [Web technologies](http://cran.r-project.org/web/views/WebTechnologies.html) for access to many GIS data.
-
-
-* [sp]()
-* [spacetime]()
-* [spatial]()
-* [rgeos]()
-* [rgdal]()
-* [raster]()
-* [rasterVis]()
-* [rts]() Raster time series
-* [spatial.tools]() Functions for raster processing, including parallel processing
-* [maptools]() Reading and manipulating geographic data
-* [PBSmapping]()
-* [taRifx.geo]() Useful spatial functions
-
-* [climstats]() Tools for climate and raster analyses
-
-* [countrycode]() Converts country codes
-* [cshapes]() Dataset of country boundaries
-* [gdistance]() Calculate distances and routes on grids
-* [geometry]() Mesh generation and surface tesselation
-* [geosphere]() Several GIS tools, esp. aimed at large scales (global)
-* [geonames]()
-* [mapproj]() Converts lat-lon data into projected coordinates
-* [geospacom]() Generates distance matrices from shape files and represents spatially weighted multilevel analysis results
-
-* [dismo]()
-* [fossil]() 
-
-* [ggmap]() Plotting on Google Maps and OpenStreetMap
-* [GISTools]() Some further GIS tools (e.g. cloropleth maps)
-* [mapplots]() Data visualisation on maps
-* [maps]() Mapping tools
-* [OpenStreetMap]() Access to OpenStreetMap and Bing images
-* [osmar]()
-* [plotGoogleMaps]()
-* [RgoogleMaps]()
-* [R2G2]() Plot anything in Google Earth
-* [rCarto]() useful functions for mapping
-* [marmap]() working with bathymetric and topographic data
-* [plotKML]() Visualization of spatial and spatio-temporal objects in Google Earth
-* [MODISTools](http://cran.r-project.org/web/packages/MODISTools/) 
-* [spGoogle](http://cran.r-project.org/web/packages/spGoogle) Interacting R with Google maps
-* [rMaps]() Interactive maps
-* [leafletR]()
-* [GEOmap]()
-* [rworldmap]()
-* [choroplethr]()
-* [mapmisc](http://cran.r-project.org/web/packages/mapmisc/index.html) Utilities for producing maps
-* [sinkr](https://github.com/menugget/sinkr) Some GIS functions and colour palettes
-
-* [rlandscape]() Generates spatial landscapes
-
-* [RSAGA]()
-* [spgrass6]()
-* [spsextante]()
-* [RPyGeo]()
-
-
-
-
-
-## Spatial Analysis
-
-
-Check also CRAN Task View on [Spatial](http://cran.r-project.org/web/views/Spatial.html) and [Spatiotemporal](http://cran.r-project.org/web/views/SpatioTemporal.html) data.
-
-* [akima]() Interpolation
-* [automap]() Automatic interpolation (kriging)
-* [ecespa]() Point pattern analysis
-* [fields]() Splines, kriging, etc
-* [geoR]() Geostatistical analysis
-* [geoRglm]() Spatial GLMs
-* [geospt]() Geostatistics
-* [GeoXP]() Interactive exploratory analysis of spatial data
-* [gstat]() Geostatistics (variograms, kriging)
-* [intamap]() Automatic spatial interpolation
-* [geostatsp]() Geostatistics using SpatialPoints and rasters
-* [spatstat]()
-* [spBayes]()
-* [spdep]() Modeling spatial dependence
-* [stpp]() Point patterns
-* [rtop]() Spatial interpolation of data
-
-
-
-## Networks
-
-* [bipartite]()
-* [igraph]() Network analysis and visualization
-* [enaR]()
-* [qgraph]()
-
-
-
-
-## Phylogenetics, phylogeography & comparative analysis
-
-
-Check also [Phylogenetics CRAN task view](http://cran.r-project.org/web/views/Phylogenetics.html).
-
-* [ape]() 
-* [adephylo](http://cran.r-project.org/web/packages/adephylo/index.html) Exploratory analysis
-* [Treesim]() Tree simulation. See also [treesimGM]()
-* [cladoRcpp]() Phylogenetic analysis of geographic ranges
-* [caper]() Comparative analysis
-* [PVR]() Phylogenetic Eigenvector Regression
-* [BEDASSLE](http://cran.r-project.org/web/packages/BEDASSLE/) Disentangles the effects of geographic and ecological isolation on genetic differentiation
-* [geiger]()
-* [geoscale]() Geological timescale
-* [phangorn]()
-* [phytools]()
-* [pegas]()
-* [picante]()
-* [stratigraph]()
-* [treebase]()
-* [MCMCglmm]()
-
-
-
-
-
-## Palaeoecology
-
-* [Bchron](https://cran.r-project.org/web/packages/Bchron/index.html) Bayesian chronologies
-* [Bclim](https://cran.r-project.org/web/packages/Bclim/index.html) Palaeoclimate reconstruction
-
-
-
-## Dendrochronology
-
-* [dplR](https://github.com/cran/dplR) Dendrochronology
-* [measuRing](https://github.com/cran/measuRing) Measuring ring width from scanned images.  
-* [TRADER](https://github.com/pavel-fibich/TRADER) Tree Ring Analysis of Disturbance Events  
-* [dendrobox](https://github.com/cszang/dendrobox) Interactive Tree-Ring Data Exploration Tool  
-* [treeclim](https://github.com/cszang/treeclim) Modeling tree-climate relationships.  
-* [bootRes](https://github.com/cszang/bootRes) Bootstrapped response functions.  
-* [rwtocore](https://github.com/ltrr-arizona-edu/rwtocore) convert tree-ring measurements to drawings of cores (Ruby).
-* [triforce](https://github.com/ltrr-arizona-edu/triforce) read the TRiDaS dendrochronological standard and communicate with Tellervo servers.
-* [pointRes](https://cran.r-project.org/web/packages/pointRes/index.html) Calculate and plot pointer years
-* [BIOdry](https://cran.r-project.org/web/packages/BIOdry/index.html) Multilevel Modeling of Dendroclimatical Fluctuations
-* [sclero](https://cran.r-project.org/web/packages/sclero/) Measure Growth Patterns and Align Sampling Spots in Photographs
-* [dendrometeR](https://cran.r-project.org/web/packages/dendrometeR/) Analyzing Dendrometer Data.
-
-
-
-
-
-
 ## Ecological analyses (miscellaneous)
-
 Check also [Environmetrics CRAN Task View](http://cran.r-project.org/web/views/Environmetrics.html).
-
-
 * [betapart]() Beta diversity
 * [BiodiversityR]() GUI for biodiversity, suitability and community ecology analyses
 * [cheddar]() Analysis and visualisation of community data
@@ -649,8 +414,6 @@ Check also [Environmetrics CRAN Task View](http://cran.r-project.org/web/views/E
 
 
 ## Miscellaneous
-
-
 * [digitize]() Extract data from plots
 * [downloader]() Download files from internet
 * [hwriter]() Outputs R objects in HTML format
@@ -678,10 +441,7 @@ Check also [Environmetrics CRAN Task View](http://cran.r-project.org/web/views/E
 * [DescTools](http://cran.r-project.org/web/packages/DescTools/index.html)
 
 
-
 ## R programming
-
-
 * [codetools]() Code analysis tools
 * [compiler]() Compile R code (e.g. a function) to speed it up
 * [devtools]()
@@ -706,8 +466,3 @@ Check also [Environmetrics CRAN Task View](http://cran.r-project.org/web/views/E
 * [scrapeR]()
 * [aprof](http://cran.r-project.org/web/packages/aprof/index.html) Profiling code and visualizing results to evaluate where is best to focus code optimization.
 * [regex](https://github.com/richierocks/regex) Regular expressions made easier.
-
-
-
-
-
