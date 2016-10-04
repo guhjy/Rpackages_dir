@@ -53,7 +53,8 @@ Check out this great cheatsheet: [Data wrangling with dplyr and tidyr](http://ww
 ## General statistics
 
 
-
+### Feature selection
+* [VariableSelection] () Identify the appropriate set of predictors of a binary outcome
 
 ### Ordination & Multivariate Analysis
 
