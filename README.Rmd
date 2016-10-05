@@ -4,10 +4,21 @@ output:
     variant: markdown_github
     toc: yes
 ---
-
-## My directory of R packages for data analysis and visualization, Bayesian statistics, mapping, GIS, climate, Species Distribution Modelling, ecology, biogeography, evolution, reproducible science...
-
+## R packages for data analysis and visualization, Bayesian statistics, ecology, reproducible research (https://cran.r-project.org/web/packages/available_packages_by_name.html)
 Updated `r as.character(Sys.Date())`
+
+### Multiple testing
+* [mutoss] () Unified Multiple Testing Procedures
+
+#### FDR
+* [FDRreg] (https://cran.r-project.org/web/packages/FDRreg/index.html) False discovery rate regression for tests with auxiliary information
+* [fdrtool] () Estimation of (Local) False Discovery Rates and Higher Criticism
+
+### Sensitivity analysis
+* [multisensi] () Multivariate Sensitivity Analysis
+* [sensitivity] Global Sensitivity Analysis of Model Outputs
+* [sensitivityPStrat] () Principal Stratification Sensitivity Analysis
+* [treatSens] () ATE for lm with binary or continuous treatments
 
 ### Assumption tests
 * [car] () avPlot (influential data), crPlot (linearity), linearHypothesis, ncvTest (heteroscedasticity test for lm), influencePlot (to detect outliers, better than Cooks distance in plot), outlierTest, leveragePlots, qqPlot (normality), vif
@@ -18,23 +29,32 @@ Updated `r as.character(Sys.Date())`
 * [LogisticDx] ()
 * [gof] () Cumres for lm and glm
 * [hydroGOF] ()
-* [intRegGOF] () lm, glm, nls
-* [qvlma] () lm
+* [intRegGOF] () Integrated Regression Goodness of Fit for lm, glm, nls
+* [gvlma] () Global Validation of Linear Models Assumptions for lm
+
+### ATE
+* [ATE] () binary treatment
+* [causalTree] () heterogeneous subgroup binary treatment effects by CART
+* [FindIt] () Finding Heterogeneous Treatment Effects
+* [iWeigReg] () Improved (doubly robust) methods for causal inference and missing data problems, ATE
 
 ### Causation
 * [bnlearn] ()
 * [causaleffect] ()
 * [causalFX] ()
 * [causalsens] ()
-* [causalTree] () heterogeneous subgroup treatment effects by CART
 * [causalGAM] ()
 * [CovSel] ()
 * [CompareCausalNetworks] () backShift, CAM, InvariantCausalPrediction, pcalg
 * [ParallelPC] ()
-* [PCovR] Principle covariates regression ()
-* [SID] ()
-* [treatSens] () lm with binary or continuous treatments
-* [wfe] () longitudinal data
+* [PCovR] () Principle covariates regression, both for prediction and PCA
+* [SID] () Scores Features for Feature Selection
+* [wfe] () for longitudinal data
+
+### SEM
+
+
+### Mediation analysis
 
 ### Collinearity (VIF>10, only for explanation): reduced by centering
 * [ridge]()
@@ -293,7 +313,7 @@ Check also [CRAN Task View on Graphics](http://cran.r-project.org/web/views/Grap
 * [googleVis]() Using google chart tools
 * [rCharts]() Interactive charts
 * [lattice]() Multivariate plots
-* [manipulate]() Interactive plots
+* [manipulate]() Interactive plots for Rstudio
 * [misc3d]() 3D plots
 * [mvtsplot]() Multivariate time series plot
 * [pca3d]() Three dimensional PCA plots
@@ -414,7 +434,7 @@ Check also [Environmetrics CRAN Task View](http://cran.r-project.org/web/views/E
 * [installr]() Automatically update R
 * [mail]() Send email notifications from R
 * [sendmailR]()
-* [mosaic]()
+* [mosaic]() Project MOSAIC Statistics and Mathematics Teaching Utilities
 * [audiolyzR]() Creates audio representations of common plots
 * [WebDevelopR]() Web development
 * [ProjectTemplate]() 
@@ -429,7 +449,7 @@ Check also [Environmetrics CRAN Task View](http://cran.r-project.org/web/views/E
 * [refnet]() Reads and works with data from ISI Web of Knowledge
 * [scholar]() 
 * [slidify]()
-* [sos]() Search R packages
+* [sos]() Search R packages, findFn
 * [source.gist]()
 * [twitteR]()
 * [DescTools](http://cran.r-project.org/web/packages/DescTools/index.html)
