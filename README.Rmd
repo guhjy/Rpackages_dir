@@ -137,7 +137,7 @@ Check out this great cheatsheet: [Data wrangling with dplyr and tidyr](http://ww
 * [lubridate]() Dates and times
 * [multitable]() Manipulate multiple arrays
 * [datacheck]() Tools for checking data consistency
-* [pastecs] stat.desc
+* [pastecs] () stat.desc
 * [tabplot]() Large datasets viz.
 * [tabplotd3]() Interactive
 * [tableplot]()
