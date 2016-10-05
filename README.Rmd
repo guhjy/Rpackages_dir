@@ -99,22 +99,22 @@ Updated `r as.character(Sys.Date())`
 * [leaps] () regression subset selection
 
 #### for survival:
-[ipred] () indirect classification and bagging for classification, regression and survival
-[ranger] rf for HD1 data
-[rsig] () Robust Signature Selection for Survival Outcomes
-[SurvRank] ()
+* [ipred] () indirect classification and bagging for classification, regression and survival
+* [ranger] () rf for HD1 data
+* [rsig] () Robust Signature Selection for Survival Outcomes
+* [SurvRank] ()
 
 ### Penalization of regularization
-* {Boruta] () An all relevant feature selection wrapper algorithm. It finds relevant features by comparing original attributes' importance with importance achievable at random, estimated using their permuted copies.
+* [Boruta] () An all relevant feature selection wrapper algorithm. It finds relevant features by comparing original attributes' importance with importance achievable at random, estimated using their permuted copies.
 * [c060] () Inference for Lasso and Elastic-Net Regularized Cox and Generalized Linear Models
 * [FeaLect] () Scores Features for Feature Selection
 * [fscaret] () Automated Feature Selection from 'caret'
 * [Fselector] () Attribute subset selection is the process of identifying and removing as much of the irrelevant and redundant information as possible. rf
-* [FWDselect] select the best model or best subset of variables using different types of data (binary, Gaussian or Poisson) and applying it in different contexts (parametric or non-parametric).
+* [FWDselect] () select the best model or best subset of variables using different types of data (binary, Gaussian or Poisson) and applying it in different contexts (parametric or non-parametric).
 * [glmnet] () Lasso and Elastic-Net Regularized glm, for glm and survival
 * [glmulti] () for interactions
 * [meifly] () Exploratory model analysis. Fit and graphical explore ensembles of linear models
-* [penalized] Penalized Estimation in GLMs and in the Cox Model. Fitting possibly high dimensional
+* [penalized] () Penalized Estimation in GLMs and in the Cox Model. Fitting possibly high dimensional
 * [relaxnet] () Relaxation of glmnet models for lm
 * [shrink] () Global, Parameterwise and Joint Shrinkage Factor Estimation
 
